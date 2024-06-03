@@ -1,13 +1,27 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 20px;
     background-color: #f0f8ff;
     color: #333;
+    animation: fadeIn 1s ease-in-out;
 }
+
 h1 {
     text-align: center;
     color: #005f99;
+    animation: fadeIn 1s ease-in-out;
 }
+
 form {
     max-width: 600px;
     margin: 0 auto 20px auto;
@@ -16,12 +30,15 @@ form {
     border: 1px solid #cce0ff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-in-out;
 }
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
+
 input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
@@ -30,6 +47,7 @@ input[type="text"], input[type="number"] {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -39,30 +57,43 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
 button:hover {
     background-color: #004080;
+    transform: scale(1.05);
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
+
 th, td {
     border: 1px solid #cce0ff;
     padding: 12px;
     text-align: center;
 }
+
 th {
     background-color: #005f99;
     color: white;
 }
+
+tbody tr {
+    animation: slideIn 0.8s ease-in-out;
+}
+
 .approved {
     background-color: #d0f0c0;
     color: #2e7d32;
 }
+
 .rejected {
     background-color: #ffcdd2;
     color: #c62828;
